@@ -3,7 +3,7 @@
 This is a full-stack MERN (MongoDB, Express, React, Node.js) application designed as a digital platform for submitting and managing complaints related to civic services.
 
 The app features a robust, role-based authentication system:
-* **Users** can register with any email, submit new complaints, and view a live feed of all complaints submitted by everyone.
+* **Users** can register with any email, submit new complaints, and view a live feed of all complaints submitted by everyone . 
 * **Admins** must register with a `@karunya.edu.in` email and are the only ones who can update a complaint's status (Pending, In Progress, Resolved).
 
 ## Core Features
