@@ -4,7 +4,7 @@
       {
         "src": "client/package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "dist" }
+        "config": { "outputDirectory": "dist" }
       },
       {
         "src": "server/server.js",
@@ -17,8 +17,16 @@
         "destination": "/server/server.js"
       },
       {
+        "source": "/assets/(.*)",
+        "destination": "/assets/$1"
+      },
+      {
+        "source": "/TamilNadu_Logo.svg.png",
+        "destination": "/TamilNadu_Logo.svg.png"
+      },
+      {
         "source": "/(.*)",
-        "destination": "/index.html" 
+        "destination": "/index.html"
       }
     ],
     "crons": [
