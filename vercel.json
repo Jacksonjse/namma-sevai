@@ -2,9 +2,9 @@
     "version": 2,
     "builds": [
       {
-        "src": "client/vite.config.js",
-        "use": "@vercel/vite",
-        "config": { "project": "client" }
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist" }
       },
       {
         "src": "server/server.js",
@@ -18,7 +18,7 @@
       },
       {
         "source": "/(.*)",
-        "destination": "/client/index.html"
+        "destination": "/index.html"
       }
     ],
     "crons": [
