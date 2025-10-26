@@ -1,13 +1,14 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "version": 2,
     "builds": [
+      {
+        "src": "client/vite.config.js",
+        "use": "@vercel/vite",
+        "config": { "project": "client" }
+      },
       {
         "src": "server/server.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "client/vite.config.js",
-        "use": "@vercel/vite"
       }
     ],
     "rewrites": [
@@ -23,9 +24,7 @@
     "crons": [
       {
         "path": "/api/complaints/auto-delete-resolved",
-        "schedule": "0 0 * * *" 
-        /* --- THIS LINE IS THE FIX --- */
-        /* (Changed from "0 * * * *") */
+        "schedule": "0 0 * * *"
       }
     ]
   }
