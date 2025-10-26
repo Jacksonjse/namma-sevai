@@ -1,0 +1,16 @@
+# Dependency folders
+/node_modules
+/client/node_modules
+/server/node_modules
+
+# Vite build output
+/client/dist
+
+# Environment files
+.env
+*.env
+/server/.env
+
+# OS files
+.DS_Store
+Thumbs.db

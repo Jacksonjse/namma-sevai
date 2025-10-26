@@ -1,0 +1,28 @@
+{
+    "name": "namma-sevai-root",
+    "version": "1.0.0",
+    "description": "Namma Sevai: Digital Complaint and Feedback Platform",
+    "main": "server/server.js",
+    "scripts": {
+        "server": "npm run dev --prefix server",
+        "client": "npm run dev --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "install-server": "npm install --prefix server",
+        "install-client": "npm install --prefix client",
+        "install-all": "npm install && npm run install-server && npm run install-client"
+    },
+    "keywords": [
+        "mern",
+        "react",
+        "node",
+        "mongodb"
+    ],
+    "author": "Gemini",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "dependencies": {
+        "mongodb": "^6.20.0"
+    }
+}

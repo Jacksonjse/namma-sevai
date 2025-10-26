@@ -1,0 +1,29 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "builds": [
+      {
+        "src": "server/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "client/vite.config.js",
+        "use": "@vercel/vite"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "/server/server.js"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/client/index.html"
+      }
+    ],
+    "crons": [
+      {
+        "path": "/api/complaints/auto-delete-resolved",
+        "schedule": "0 * * * *"
+      }
+    ]
+  }
