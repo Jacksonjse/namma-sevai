@@ -23,7 +23,9 @@
     "crons": [
       {
         "path": "/api/complaints/auto-delete-resolved",
-        "schedule": "0 * * * *"
+        "schedule": "0 0 * * *" 
+        /* --- THIS LINE IS THE FIX --- */
+        /* (Changed from "0 * * * *") */
       }
     ]
   }
