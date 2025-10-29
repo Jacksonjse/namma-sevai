@@ -5,9 +5,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "workDirectory": "client",
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
+        "distDir": "client/dist"
       }
     },
     {
@@ -15,22 +13,10 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
-    },
-    {
-      "source": "/TamilNadu_Logo.svg.png",
-      "destination": "/TamilNadu_Logo.svg.png"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/index.js" },
+    { "src": "/assets/(.*)", "dest": "client/dist/assets/$1" },
+    { "src": "/TamilNadu_Logo.svg.png", "dest": "client/dist/TamilNadu_Logo.svg.png" },
+    { "src": "/(.*)", "dest": "client/dist/index.html" }
   ]
 }
