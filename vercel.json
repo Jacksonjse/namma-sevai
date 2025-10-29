@@ -1,38 +1,32 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": { "outputDirectory": "dist" }
-      },
-      {
-        "src": "server/server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/server/server.js"
-      },
-      {
-        "source": "/assets/(.*)",
-        "destination": "/assets/$1"
-      },
-      {
-        "source": "/TamilNadu_Logo.svg.png",
-        "destination": "/TamilNadu_Logo.svg.png"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ],
-    "crons": [
-      {
-        "path": "/api/complaints/auto-delete-resolved",
-        "schedule": "0 0 * * *"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "outputDirectory": "dist" }
+    },
+    {
+      "src": "server/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/server/server.js"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/TamilNadu_Logo.svg.png",
+      "destination": "/TamilNadu_Logo.svg.png"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
