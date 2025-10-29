@@ -2,8 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/vercel.json",
-      "use": "@vercel/static-build"
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "workDirectory": "client",
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
+      }
     },
     {
       "src": "api/index.js",
