@@ -1,4 +1,4 @@
-# Namma Sevai: Digital Complaint Platform 
+# Namma Sevai: Digital Complaint Platform   
 
 This is a full-stack MERN (MongoDB, Express, React, Node.js) application designed as a digital platform for submitting and managing complaints related to civic services.
 
