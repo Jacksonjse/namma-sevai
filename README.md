@@ -4,7 +4,7 @@ This is a full-stack MERN (MongoDB, Express, React, Node.js) application designe
 
 The app features a robust, role-based authentication system:
 * **Users** can register with any email, submit new complaints, and view a live feed of all complaints submitted by everyone . 
-* **Admins** must register with a `@karunya.edu.in` email and are the only ones who can update a complaint's status (Pending, In Progress, Resolved)  .
+* **Admins** must register with a   `@karunya.edu.in` email and are the only ones who can update a complaint's status (Pending, In Progress, Resolved)  .
 
 ## Core Features
 
