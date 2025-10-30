@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { getToken } from './auth';
 
-// --- NEW DYNAMIC BASE URL ---
-// This will be 'http://localhost:5001' on your local machine
-// and 'https://namma-sevai-server.onrender.com' (or similar) on Vercel
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001';
-// --- END OF NEW URL ---
+// --- THIS IS THE CRITICAL LINE ---
+// It reads the variable from your Vercel settings.
+// On your local machine, it will use your client/.env file.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+// --- END OF CRITICAL LINE ---
 
 // Create an Axios instance
 const api = axios.create({
