@@ -60,6 +60,18 @@ const LoginAdmin = () => {
           Admin Login
         </button>
       </form>
+      {/* --- KURAL BLOCK START --- */}
+      <div className="kural-container">
+        <blockquote className="kural-tamil">
+          "ஓர்ந்துகண் ணோடாது இறைபுரிந்து யார்மாட்டும்<br/>
+          தேர்ந்துசெய் வஃதே முறை."
+        </blockquote>
+        <p className="kural-translation">
+          "To investigate, show no favor, act impartially, and consult the law—that is justice."<br/>
+          - Thirukural (541)
+        </p>
+      </div>
+      {/* --- KURAL BLOCK END --- */}
       <div className="auth-link">
         <p>
           Not an Admin? <Link to="/login/user">User Login</Link>
